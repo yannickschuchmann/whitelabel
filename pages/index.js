@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Start.module.css";
 import Navigation from "../components/Navigation";
+import Hero from "../components/Hero";
 
 export default function Start() {
   return (
@@ -10,6 +11,7 @@ export default function Start() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation></Navigation>
+      <Hero></Hero>
     </div>
   );
 }
