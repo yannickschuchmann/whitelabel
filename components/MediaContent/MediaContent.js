@@ -1,11 +1,14 @@
 import React from "react";
+import SectionHeadline from "../SectionHeadline";
 
 const MediaContent = ({
   children,
   imageSrc,
   imageAlt,
   title,
+  titleUppercase = true,
   mediaPosition = "left",
+  backgroundColor = "transparent",
 }) => {
   const columns = [
     <div className="column">
@@ -13,7 +16,7 @@ const MediaContent = ({
     </div>,
     <div className="column">
       <div className="px-6">
-        <h3 class="title is-3 is-uppercase has-text-weight-light">{title}</h3>
+        <SectionHeadline isUppercase={titleUppercase}>{title}</SectionHeadline>
         {children}
       </div>
     </div>,
@@ -24,8 +27,10 @@ const MediaContent = ({
   }
 
   return (
-    <div className="container my-4 py-5">
-      <div className="columns is-vcentered">{columns}</div>
+    <div className="" style={{ backgroundColor }}>
+      <div className="container my-4 py-6">
+        <div className="columns is-vcentered">{columns}</div>
+      </div>
     </div>
   );
 };

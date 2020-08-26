@@ -1,12 +1,12 @@
 import React from "react";
 import CallToActionSection from "../CallToActionSection";
 
-const Contact = () => {
+const PitchDeck = () => {
   return (
     <CallToActionSection>
-      <button class="button is-black is-uppercase">Contact us</button>
+      <button class="button is-light is-uppercase">Pitch Deck</button>
     </CallToActionSection>
   );
 };
 
-export default Contact;
+export default PitchDeck;
