@@ -14,7 +14,9 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "bulma": "^0.9.0",
     "next": "9.5.1",
+    "qs": "^6.9.4",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-hook-form": "^6.5.3"
   }
 }

@@ -165,11 +165,20 @@ export default function Start() {
         ]}
         socialButtons={[
           <SocialButton
+            key="ig"
             icon="instagram"
             url="https://instagram.com/whatever"
           />,
-          <SocialButton icon="twitter" url="https://twitter.com/whatever" />,
-          <SocialButton icon="facebook" url="https://facebook.com/whatever" />,
+          <SocialButton
+            key="tw"
+            icon="twitter"
+            url="https://twitter.com/whatever"
+          />,
+          <SocialButton
+            key="fb"
+            icon="facebook"
+            url="https://facebook.com/whatever"
+          />,
         ]}
       />
     </div>

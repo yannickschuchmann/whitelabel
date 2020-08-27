@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import styles from "./Footer.module.css";
 const Logo = () => (
   <div className="level-item">
@@ -7,15 +7,15 @@ const Logo = () => (
 );
 
 const Footer = ({ navigation = [], socialButtons }) => {
-  const navigationEls = navigation.map((item) => (
-    <div className="level-item">
+  const navigationEls = navigation.map((item, idx) => (
+    <div className="level-item" key={idx}>
       <a className="is-size-7 has-text-black" href={item[1]}>
         <strong>{item[0]}</strong>
       </a>
     </div>
   ));
 
-  navigationEls.splice(navigationEls.length / 2, 0, <Logo />);
+  navigationEls.splice(navigationEls.length / 2, 0, <Logo key="logo" />);
 
   return (
     <div className="container has-text-centered mt-6 py-6">

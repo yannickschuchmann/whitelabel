@@ -15,8 +15,8 @@ const SocialProof = ({ children, images = [] }) => {
     <div className="container my-5">
       <p className="py-5 is-size-6 has-text-centered">{children}</p>
       <div className="py-5 columns is-multiline is-mobile">
-        {images.map((image) => (
-          <Column {...image} />
+        {images.map((image, idx) => (
+          <Column key={idx} {...image} />
         ))}
       </div>
     </div>

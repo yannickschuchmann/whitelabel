@@ -4,7 +4,7 @@ import CallToActionSection from "../CallToActionSection";
 const Contact = () => {
   return (
     <CallToActionSection>
-      <button class="button is-black is-uppercase">Contact us</button>
+      <button className="button is-black is-uppercase">Contact us</button>
     </CallToActionSection>
   );
 };

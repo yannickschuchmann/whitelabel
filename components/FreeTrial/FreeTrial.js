@@ -1,50 +1,130 @@
-import React from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { postFreeTrial } from "../../services/googleSheets";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Form = () => {
+  const { register, handleSubmit, errors } = useForm();
+  const [isLoading, setLoading] = useState(false);
+  const [isSuccess, setSuccess] = useState(false);
+  const onSubmit = async (data) => {
+    setLoading(true);
+    try {
+      await postFreeTrial(data);
+      setSuccess(true);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div class="box has-text-left">
-      <div className="my-5">
-        <strong className="is-size-5">Sign up for a free trial</strong>
-      </div>
-      <div className="columns">
-        <div className="column">
-          <div class="control">
-            <input class="input" type="text" placeholder="First name" />
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="box has-text-left">
+        <div className="my-5">
+          <strong className="is-size-5">Sign up for a free trial</strong>
+        </div>
+        <div className="columns">
+          <div className="column">
+            <div className="control">
+              <input
+                className={`input ${errors.first_name ? "is-danger" : ""}`}
+                type="text"
+                name="first_name"
+                ref={register({ required: true })}
+                placeholder="First name*"
+              />
+            </div>
+            {errors.first_name && (
+              <p className="help is-danger">This field is required</p>
+            )}
+          </div>
+          <div className="column">
+            <div className="control">
+              <input
+                className={`input ${errors.last_name ? "is-danger" : ""}`}
+                type="text"
+                name="last_name"
+                ref={register({ required: true })}
+                placeholder="Last name*"
+              />
+            </div>
+            {errors.last_name && (
+              <p className="help is-danger">This field is required</p>
+            )}
           </div>
         </div>
-        <div className="column">
-          <div class="control">
-            <input class="input" type="text" placeholder="Last name" />
+        <div className="columns">
+          <div className="column">
+            <div className="control">
+              <input
+                className={`input ${errors.email ? "is-danger" : ""}`}
+                type="email"
+                name="email"
+                ref={register({
+                  required: true,
+                  pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                })}
+                placeholder="Email address*"
+              />
+            </div>
+            {errors.email && (
+              <p className="help is-danger">
+                {errors.email.type === "pattern"
+                  ? "This is not a valid email"
+                  : "This field is required"}
+              </p>
+            )}
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column">
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                name="phone"
+                ref={register}
+                placeholder="Phone"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column">
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                name="company"
+                ref={register}
+                placeholder="Company"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column">
+            {!isSuccess ? (
+              <button
+                type="submit"
+                className={`button is-black ${isLoading ? "is-loading" : ""}`}
+              >
+                Register now
+              </button>
+            ) : (
+              <button class="button is-static">
+                <span class="icon is-small">
+                  <FontAwesomeIcon icon={["fas", "check"]} />
+                </span>
+                <span>Success</span>
+              </button>
+            )}
           </div>
         </div>
       </div>
-      <div className="columns">
-        <div className="column">
-          <div class="control">
-            <input class="input" type="text" placeholder="Email address" />
-          </div>
-        </div>
-      </div>
-      <div className="columns">
-        <div className="column">
-          <div class="control">
-            <input class="input" type="text" placeholder="Phone" />
-          </div>
-        </div>
-      </div>
-      <div className="columns">
-        <div className="column">
-          <div class="control">
-            <input class="input" type="text" placeholder="Company" />
-          </div>
-        </div>
-      </div>
-      <div className="columns">
-        <div className="column">
-          <button className="button is-black">Register now</button>
-        </div>
-      </div>
-    </div>
+    </form>
   );
 };
 

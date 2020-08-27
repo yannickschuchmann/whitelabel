@@ -11,10 +11,10 @@ const MediaContent = ({
   backgroundColor = "transparent",
 }) => {
   const columns = [
-    <div className="column">
+    <div className="column" key="image">
       <img src={imageSrc} alt={imageAlt} />
     </div>,
-    <div className="column">
+    <div className="column" key="content">
       <div className="px-6">
         <SectionHeadline isUppercase={titleUppercase}>{title}</SectionHeadline>
         {children}
