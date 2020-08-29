@@ -12,6 +12,7 @@ import MediaContent from "../components/MediaContent";
 import BodySegments, { Segment } from "../components/BodySegments";
 import ListItem from "../components/ListItem";
 import SocialButton from "../components/SocialButton/SocialButton";
+import { withTranslation } from "../i18n";
 
 const socialProofImages = Array.from({ length: 6 }).fill({
   src: "/acme.svg",
@@ -19,7 +20,7 @@ const socialProofImages = Array.from({ length: 6 }).fill({
   alt: "Logo of ACME",
 });
 
-export default function Start() {
+const Start = ({ t }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -28,10 +29,7 @@ export default function Start() {
       </Head>
       <Navigation />
       <Hero />
-      <SocialProof images={socialProofImages}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore
-      </SocialProof>
+      <SocialProof images={socialProofImages}>{t("socialProof")}</SocialProof>
       <Contact />
       <MediaContent
         imageSrc="/vision.jpg"
@@ -183,4 +181,10 @@ export default function Start() {
       />
     </div>
   );
-}
+};
+
+Start.getInitialProps = async () => ({
+  namespacesRequired: ["common", "start"],
+});
+
+export default withTranslation("start")(Start);
