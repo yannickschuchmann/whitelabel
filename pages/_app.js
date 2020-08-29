@@ -4,6 +4,11 @@ import "../styles/globals.css";
 import "bulma/css/bulma.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
+import smoothscroll from "smoothscroll-polyfill";
+if (process.browser) {
+  smoothscroll.polyfill();
+}
+
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 
 config.autoAddCss = false;

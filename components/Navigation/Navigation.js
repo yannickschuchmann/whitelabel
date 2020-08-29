@@ -1,11 +1,29 @@
 import React, { useState } from "react";
 
-const Navigation = () => {
+const Navigation = ({ links }) => {
   const [open, setOpen] = useState(false);
 
   const onOpen = () => {
     setOpen(!open);
   };
+
+  const onJump = (target) => (e) => {
+    e.preventDefault();
+    const targetEl = document.querySelector(target);
+    targetEl && targetEl.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const navItems = links.map(({ text, url, target }) => (
+    <a
+      key={text}
+      className="navbar-item"
+      onClick={target && onJump(target)}
+      href={url}
+    >
+      {text}
+    </a>
+  ));
+
   return (
     <div className="container">
       <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -26,29 +44,7 @@ const Navigation = () => {
           </a>
         </div>
         <div className={`${open && "is-active"} navbar-menu`}>
-          <div className="navbar-end">
-            <a className="navbar-item" href="/vision">
-              Vision
-            </a>
-            <a className="navbar-item" href="/mission">
-              Mission
-            </a>
-            <a className="navbar-item" href="/value-proposition">
-              Value Proposition
-            </a>
-            <a className="navbar-item" href="/free-trial">
-              Free Trial
-            </a>
-            <a className="navbar-item" href="/about-us">
-              About us
-            </a>
-            <a className="navbar-item" href="/deepchange-network">
-              deepchange Network
-            </a>
-            <a className="navbar-item" href="/contact">
-              Contact
-            </a>
-          </div>
+          <div className="navbar-end">{navItems}</div>
         </div>
       </nav>
     </div>
