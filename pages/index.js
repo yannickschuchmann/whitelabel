@@ -1,16 +1,16 @@
 import Head from "next/head";
 import styles from "../styles/Start.module.css";
+import Contact from "./components/Contact";
+import PitchDeck from "./components/PitchDeck";
 import Header from "./components/Header";
 import {
   BodySegment,
   BodySegments,
-  Contact,
   Footer,
   FreeTrial,
   Hero,
   ListItem,
   MediaContent,
-  PitchDeck,
   Quote,
   SocialButton,
   SocialProof,
