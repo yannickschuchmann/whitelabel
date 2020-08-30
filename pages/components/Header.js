@@ -1,6 +1,6 @@
 import React from "react";
 import { withTranslation } from "../../i18n";
-import Navigation from "../../components/Navigation";
+import { Navigation } from "@deepchange/building-blocks";
 
 const Header = ({ t }) => {
   const navLinks = [

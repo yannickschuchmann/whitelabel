@@ -1,17 +1,20 @@
 import Head from "next/head";
 import styles from "../styles/Start.module.css";
 import Header from "./components/Header";
-import Hero from "../components/Hero";
-import SocialProof from "../components/SocialProof";
-import Contact from "../components/Contact";
-import PitchDeck from "../components/PitchDeck";
-import Quote from "../components/Quote";
-import Footer from "../components/Footer";
-import FreeTrial from "../components/FreeTrial";
-import MediaContent from "../components/MediaContent";
-import BodySegments, { Segment } from "../components/BodySegments";
-import ListItem from "../components/ListItem";
-import SocialButton from "../components/SocialButton/SocialButton";
+import {
+  BodySegment,
+  BodySegments,
+  Contact,
+  Footer,
+  FreeTrial,
+  Hero,
+  ListItem,
+  MediaContent,
+  PitchDeck,
+  Quote,
+  SocialButton,
+  SocialProof,
+} from "@deepchange/building-blocks";
 import { withTranslation } from "../i18n";
 
 const socialProofImages = Array.from({ length: 6 }).fill({
@@ -19,6 +22,9 @@ const socialProofImages = Array.from({ length: 6 }).fill({
   url: "https://google.com",
   alt: "Logo of ACME",
 });
+
+const FREE_TRIAL_ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbwJBcYrtIoU5oEThnYgxO7cDb2vX3xukk4VDJtmB_lO2_hf416M/exec";
 
 const Start = ({ t }) => {
   return (
@@ -80,48 +86,48 @@ const Start = ({ t }) => {
       </div>
       <div id="value-props">
         <BodySegments title="Value Propositions" titlePosition="right">
-          <Segment title="Value prop A">
+          <BodySegment title="Value prop A">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
             quasi nihil aspernatur, veritatis eos facilis iure libero, at
             aliquid minus quis dolor beatae in!
-          </Segment>
-          <Segment title="Value prop B">
+          </BodySegment>
+          <BodySegment title="Value prop B">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
             quasi nihil aspernatur, veritatis eos facilis iure libero, at
             aliquid minus quis dolor beatae in!
-          </Segment>
-          <Segment title="Value prop C">
+          </BodySegment>
+          <BodySegment title="Value prop C">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
             quasi nihil aspernatur, veritatis eos facilis iure libero, at
             aliquid minus quis dolor beatae in!
-          </Segment>
-          <Segment title="Value prop D">
+          </BodySegment>
+          <BodySegment title="Value prop D">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
             quasi nihil aspernatur, veritatis eos facilis iure libero, at
             aliquid minus quis dolor beatae in!
-          </Segment>
-          <Segment title="Value prop E">
+          </BodySegment>
+          <BodySegment title="Value prop E">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
             quasi nihil aspernatur, veritatis eos facilis iure libero, at
             aliquid minus quis dolor beatae in!
-          </Segment>
-          <Segment title="Value prop F">
+          </BodySegment>
+          <BodySegment title="Value prop F">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
             quasi nihil aspernatur, veritatis eos facilis iure libero, at
             aliquid minus quis dolor beatae in!
-          </Segment>
+          </BodySegment>
         </BodySegments>
       </div>
       <PitchDeck />
       <Contact />
       <div id="free-trial">
-        <FreeTrial />
+        <FreeTrial endpoint={FREE_TRIAL_ENDPOINT} />
       </div>
       <div id="about-us">
         <MediaContent

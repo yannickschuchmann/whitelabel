@@ -2,6 +2,7 @@ import App from "next/app";
 import { appWithTranslation } from "../i18n";
 import "../styles/globals.css";
 import "../styles/bulma.sass";
+import "@deepchange/building-blocks/dist/index.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 import smoothscroll from "smoothscroll-polyfill";
