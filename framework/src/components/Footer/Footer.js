@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './Footer.module.css'
-const Logo = () => (
+const Logo = ({ src }) => (
   <div className='level-item'>
-    <img src='logo.png' className={styles.logo} alt='Logo' />
+    <img src={src} className={styles.logo} alt='Logo' />
   </div>
 )
 
@@ -10,6 +10,7 @@ const Footer = ({
   company = 'Company name',
   years = '2020',
   navLinks = [],
+  logoSrc,
   socialButtons
 }) => {
   const onJump = (target) => (e) => {
@@ -30,7 +31,13 @@ const Footer = ({
     </div>
   ))
 
-  navigationEls.splice(navigationEls.length / 2, 0, <Logo key='logo' />)
+  if (logoSrc) {
+    navigationEls.splice(
+      navigationEls.length / 2,
+      0,
+      <Logo src={logoSrc} key='logo' />
+    )
+  }
 
   return (
     <div className='container has-text-centered mt-6 py-6'>
