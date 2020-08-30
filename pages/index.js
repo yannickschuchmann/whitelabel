@@ -15,7 +15,7 @@ import {
   SocialButton,
   SocialProof,
 } from "@deepchange/building-blocks";
-import { withTranslation } from "../i18n";
+import { useTranslation, withTranslation } from "../i18n";
 
 const socialProofImages = Array.from({ length: 6 }).fill({
   src: "/acme.svg",
@@ -27,6 +27,7 @@ const FREE_TRIAL_ENDPOINT =
   "https://script.google.com/macros/s/AKfycbwJBcYrtIoU5oEThnYgxO7cDb2vX3xukk4VDJtmB_lO2_hf416M/exec";
 
 const Start = ({ t }) => {
+  const { t: commonT } = useTranslation("common");
   return (
     <div className={styles.container}>
       <Head>
@@ -34,7 +35,7 @@ const Start = ({ t }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Hero />
+      <Hero headline="headline" subline="subline" />
       <SocialProof images={socialProofImages}>{t("socialProof")}</SocialProof>
       <Contact />
       <div id="vision">
@@ -171,15 +172,46 @@ const Start = ({ t }) => {
         <Contact />
       </div>
       <Footer
-        navigation={[
-          ["Vision", "#vision"],
-          ["Mission", "#mission"],
-          ["Value Propositions", "#value-props"],
-          ["Free Trial", "#free-trial"],
-          ["deepchange network", "#deepchange"],
-          ["About us", "#about"],
-          ["Contact", "#contact"],
-          ["Legal", "#legal"],
+        navLinks={[
+          {
+            text: commonT("nav.vision"),
+            target: "#vision",
+            url: "#vision",
+          },
+          {
+            text: commonT("nav.mission"),
+            target: "#mission",
+            url: "#mission",
+          },
+          {
+            text: commonT("nav.value-props"),
+            target: "#value-props",
+            url: "#value-props",
+          },
+          {
+            text: commonT("nav.free-trial"),
+            target: "#free-trial",
+            url: "#free-trial",
+          },
+          {
+            text: commonT("nav.about-us"),
+            target: "#about-us",
+            url: "#about-us",
+          },
+          {
+            text: commonT("nav.deepchange"),
+            target: "#deepchange",
+            url: "#deepchange",
+          },
+          {
+            text: commonT("nav.contact"),
+            target: "#contact",
+            url: "#contact",
+          },
+          {
+            text: commonT("nav.legal"),
+            url: "/legal",
+          },
         ]}
         socialButtons={[
           <SocialButton

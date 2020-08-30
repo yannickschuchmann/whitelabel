@@ -9,13 +9,23 @@ const Logo = () => (
 const Footer = ({
   company = 'Company name',
   years = '2020',
-  navigation = [],
+  navLinks = [],
   socialButtons
 }) => {
-  const navigationEls = navigation.map((item, idx) => (
+  const onJump = (target) => (e) => {
+    e.preventDefault()
+    const targetEl = document.querySelector(target)
+    targetEl && targetEl.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const navigationEls = navLinks.map(({ text, url, target }, idx) => (
     <div className='level-item' key={idx}>
-      <a className='is-size-7 has-text-black' href={item[1]}>
-        <strong>{item[0]}</strong>
+      <a
+        className='is-size-7 has-text-black'
+        onClick={target && onJump(target)}
+        href={url}
+      >
+        <strong>{text}</strong>
       </a>
     </div>
   ))
