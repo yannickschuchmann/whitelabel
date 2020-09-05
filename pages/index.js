@@ -172,6 +172,7 @@ const Start = ({ t }) => {
         <Contact />
       </div>
       <Footer
+        logoSrc="/logo.png"
         navLinks={[
           {
             text: commonT("nav.vision"),

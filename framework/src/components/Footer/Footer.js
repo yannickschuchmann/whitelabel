@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Footer.module.css'
+import styles from './Footer.module.scss'
 const Logo = ({ src }) => (
   <div className='level-item'>
     <img src={src} className={styles.logo} alt='Logo' />
@@ -41,7 +41,9 @@ const Footer = ({
 
   return (
     <div className='container has-text-centered mt-6 py-6'>
-      <div className='level pt-6 px-6 mx-6'>{navigationEls}</div>
+      <div className={`level pt-6 px-6 mx-6 ${styles.navLinks}`}>
+        {navigationEls}
+      </div>
       <hr />
       <div className='pt-5'>{socialButtons}</div>
       <p className='is-size-7 has-text-dark'>

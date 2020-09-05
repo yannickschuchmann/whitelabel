@@ -1,0 +1,14 @@
+@import 'node_modules/bulma/sass/utilities/initial-variables.sass';
+
+.logo {
+  height: 48px;
+}
+
+@media (max-width: $desktop) {
+  .navLinks {
+    display: block;
+    > div {
+      margin-bottom: 0.75rem;
+    }
+  }
+}

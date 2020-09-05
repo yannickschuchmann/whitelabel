@@ -1,6 +1,6 @@
 {
   "name": "@deepchange/building-blocks",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "React components for prototyping project pages, mainly used by deepchange community.",
   "author": "yannickschuchmann",
   "license": "ISC",
@@ -51,14 +51,15 @@
     "microbundle-crl": "^0.13.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
-    "react": "link:../../deepadvice/node_modules/react",
-    "react-dom": "link:../../deepadvice/node_modules/react-dom",
-    "react-scripts": "link:../../deepadvice/node_modules/react-scripts"
+    "react": "link:../node_modules/react",
+    "react-dom": "link:../node_modules/react-dom",
+    "react-scripts": "link:../node_modules/react-scripts"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
+    "bulma": "^0.9.0",
     "qs": "^6.9.4",
     "react-hook-form": "^6.5.3"
   }
