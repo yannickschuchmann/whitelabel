@@ -1,0 +1,32 @@
+{
+  "title": "Legal",
+  "address": "deepXtech UG (haftungsbeschränkt)<br />Am Wingertsberg 23<br />64823 Groß-Umstadt<br />Germany",
+  "representative": {
+    "title": "Representative",
+    "text": "John Doe (Managing director)"
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "Phone: +49 (0) 162 971 54 24 (Monday to Friday*, 8am – 6pm, * except on national holidays in Germany)<br />E-Mail: <mailto>info@amiinporn.org</mailto>"
+  },
+  "vat": {
+    "title": "VAT ID No.",
+    "text": "DE123456789"
+  },
+  "commercialRegistration": {
+    "title": "Registration with the Commercial Register",
+    "text": "Commercial Register: Local Court of Darmstadt/Germany<br />Registration Number: HRB 99361"
+  },
+  "odr": {
+    "title": "Online Dispute Resolution (ODR Platform)",
+    "text": "The European Commission provides an online dispute resolution platform (ODR platform) under: <a>https://webgate.ec.europa.eu/odr/</a><br /> Our email-address: <mailto>info@amiinporn.org</mailto>"
+  },
+  "responsiblePerson": {
+    "title": "Responsible person according to Sec. 55 para. 2 of the Interstate Treaty on Broadcasting (RStV)",
+    "text": "John Doe<br />Am Wingertsberg 23<br />64823 Gross-Umstadt<br />Germany"
+  },
+  "icons": {
+    "title": "Icons",
+    "text": "Icons: Freepik , see <a>www.flaticon.com</a>"
+  }
+}
