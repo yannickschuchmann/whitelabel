@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+
 import styles from './Footer.module.scss'
 const Logo = ({ src }) => (
   <div className='level-item'>
@@ -21,13 +23,14 @@ const Footer = ({
 
   const navigationEls = navLinks.map(({ text, url, target }, idx) => (
     <div className='level-item' key={idx}>
-      <a
-        className='is-size-7 has-text-black'
-        onClick={target && onJump(target)}
-        href={url}
-      >
-        <strong>{text}</strong>
-      </a>
+      <Link href={url}>
+        <a
+          onClick={target && onJump(target)}
+          className='is-size-7 has-text-black'
+        >
+          <strong>{text}</strong>
+        </a>
+      </Link>
     </div>
   ))
 
