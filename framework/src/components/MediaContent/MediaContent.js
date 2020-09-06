@@ -1,5 +1,6 @@
 import React from 'react'
 import SectionHeadline from '../SectionHeadline'
+import styles from './MediaContent.module.css'
 
 const MediaContent = ({
   children,
@@ -28,7 +29,7 @@ const MediaContent = ({
 
   return (
     <div className='' style={{ backgroundColor }}>
-      <div className='container my-4 py-6'>
+      <div className={`container my-4 py-6 ${styles.container}`}>
         <div className='columns is-vcentered'>{columns}</div>
       </div>
     </div>

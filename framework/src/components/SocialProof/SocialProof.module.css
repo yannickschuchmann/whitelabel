@@ -1,3 +1,7 @@
+.container {
+  overflow-x: hidden;
+}
+
 .image {
   height: 50px;
   max-width: 70%;
