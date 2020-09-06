@@ -1012,6 +1012,15 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@deepchange/building-blocks@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@deepchange/building-blocks/-/building-blocks-1.5.0.tgz#21696f1c7426ac485a406332b697b4a06fe94f4f"
+  integrity sha512-i5HksmPsZAwY8KtWOvv8HKWhworc1U+pxCsat5hY2PTm+t8xV4VSUOKqdZwjvHBeQ/bee5e+jSsWIbBzKJI0pQ==
+  dependencies:
+    bulma "^0.9.0"
+    qs "^6.9.4"
+    react-hook-form "^6.5.3"
+
 "@fortawesome/fontawesome-common-types@^0.2.30":
   version "0.2.30"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.30.tgz#2f1cc5b46bd76723be41d0013a8450c9ba92b777"
