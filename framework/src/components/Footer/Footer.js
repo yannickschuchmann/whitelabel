@@ -16,9 +16,11 @@ const Footer = ({
   socialButtons
 }) => {
   const onJump = (target) => (e) => {
-    e.preventDefault()
     const targetEl = document.querySelector(target)
-    targetEl && targetEl.scrollIntoView({ behavior: 'smooth' })
+    if (targetEl) {
+      e.preventDefault()
+      targetEl.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   const navigationEls = navLinks.map(({ text, url, target }, idx) => (

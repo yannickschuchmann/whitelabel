@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Link from 'next/link'
 
 const Navigation = ({ links, logoSrc }) => {
   const [open, setOpen] = useState(false)
@@ -8,20 +9,19 @@ const Navigation = ({ links, logoSrc }) => {
   }
 
   const onJump = (target) => (e) => {
-    e.preventDefault()
     const targetEl = document.querySelector(target)
-    targetEl && targetEl.scrollIntoView({ behavior: 'smooth' })
+    if (targetEl) {
+      e.preventDefault()
+      targetEl.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   const navItems = links.map(({ text, url, target }) => (
-    <a
-      key={text}
-      className='navbar-item'
-      onClick={target && onJump(target)}
-      href={url}
-    >
-      {text}
-    </a>
+    <Link key={text} href={url}>
+      <a className='navbar-item' onClick={target && onJump(target)}>
+        {text}
+      </a>
+    </Link>
   ))
 
   return (

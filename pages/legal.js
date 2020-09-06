@@ -20,7 +20,7 @@ const Legal = ({ t }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div id="value-props">
+      <div id="legal">
         <BodySegments title={t("title")} titlePosition="right">
           <BodySegment title="">
             <Trans t={t} i18nKey="address" />
@@ -74,37 +74,37 @@ const Legal = ({ t }) => {
           {
             text: commonT("nav.vision"),
             target: "#vision",
-            url: "#vision",
+            url: "/#vision",
           },
           {
             text: commonT("nav.mission"),
             target: "#mission",
-            url: "#mission",
+            url: "/#mission",
           },
           {
             text: commonT("nav.value-props"),
             target: "#value-props",
-            url: "#value-props",
+            url: "/#value-props",
           },
           {
             text: commonT("nav.free-trial"),
             target: "#free-trial",
-            url: "#free-trial",
+            url: "/#free-trial",
           },
           {
             text: commonT("nav.about-us"),
             target: "#about-us",
-            url: "#about-us",
+            url: "/#about-us",
           },
           {
             text: commonT("nav.deepchange"),
             target: "#deepchange",
-            url: "#deepchange",
+            url: "/#deepchange",
           },
           {
             text: commonT("nav.contact"),
             target: "#contact",
-            url: "#contact",
+            url: "/#contact",
           },
           {
             text: commonT("nav.legal"),
