@@ -1,0 +1,8 @@
+@import 'node_modules/bulma/sass/utilities/initial-variables.sass';
+
+.image {
+  height: 30px;
+  @media (min-width: $tablet) {
+    height: 50px;
+  }
+}

@@ -1,19 +1,19 @@
-import React from "react";
-import styles from "./ListItem.module.css";
+import React from 'react'
+import styles from './ListItem.module.scss'
 
-const ListItem = ({ children, imageSrc, imageAlt = "" }) => {
+const ListItem = ({ children, imageSrc, imageAlt = '' }) => {
   return (
-    <div className="my-5">
-      <div className="columns is-mobile is-vcentered">
+    <div className='my-5'>
+      <div className='columns is-mobile is-vcentered'>
         {imageSrc && (
-          <div className="column is-narrow ">
+          <div className='column is-narrow '>
             <img className={styles.image} src={imageSrc} alt={imageAlt} />
           </div>
         )}
-        <div className="column">{children}</div>
+        <div className='column'>{children}</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ListItem;
+export default ListItem
