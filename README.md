@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# Setup a new project
+
+- Create new repo on github
+- `cp -r ./whitelabel ./new-project`
+- `cd new-project && rm -rf .git && git init`
+- `git add . && git commit -m "Initial commit"`
+- `git remote add origin git@github.com:new-repo`
+- `git push -u origin master`
+- Import project in vercel, choose repository & grant permissions
+- Configure Domain in Vercel + add A or CNAME Record to Domain Nameserver (namecheap or aws)
+
 ## Getting Started
 
 First, run the development server:
