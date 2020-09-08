@@ -209,6 +209,12 @@ const Start = ({ t }) => {
             target: "#contact",
             url: "#contact",
           },
+        ]}
+        secondaryNavLinks={[
+          {
+            text: commonT("nav.privacy"),
+            url: "/privacy",
+          },
           {
             text: commonT("nav.legal"),
             url: "/legal",

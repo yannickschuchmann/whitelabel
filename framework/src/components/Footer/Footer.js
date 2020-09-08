@@ -12,6 +12,7 @@ const Footer = ({
   company = 'Company name',
   years = '2020',
   navLinks = [],
+  secondaryNavLinks = [],
   logoSrc,
   socialButtons
 }) => {
@@ -36,6 +37,21 @@ const Footer = ({
     </div>
   ))
 
+  const secondaryNavigationEls = secondaryNavLinks.map(
+    ({ text, url, target }, idx) => (
+      <div className='column is-narrow' key={idx}>
+        <Link href={url}>
+          <a
+            onClick={target && onJump(target)}
+            className='is-size-7 has-text-black'
+          >
+            <strong>{text}</strong>
+          </a>
+        </Link>
+      </div>
+    )
+  )
+
   if (logoSrc) {
     navigationEls.splice(
       navigationEls.length / 2,
@@ -51,6 +67,11 @@ const Footer = ({
       </div>
       <hr />
       <div className='pt-5'>{socialButtons}</div>
+      {secondaryNavLinks.length > 0 && (
+        <div className={`columns is-centered pt-3 ${styles.navLinks}`}>
+          {secondaryNavigationEls}
+        </div>
+      )}
       <p className='is-size-7 has-text-dark'>
         © {years} {company}
       </p>
