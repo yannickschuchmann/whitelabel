@@ -1,6 +1,6 @@
 import React from 'react'
 import SectionHeadline from '../SectionHeadline'
-import styles from './MediaContent.module.css'
+import styles from './MediaContent.module.scss'
 
 const MediaContent = ({
   children,
@@ -16,7 +16,7 @@ const MediaContent = ({
       <img src={imageSrc} className='box' alt={imageAlt} />
     </div>,
     <div className='column' key='content'>
-      <div className='px-6'>
+      <div className={styles.xSpacing}>
         <SectionHeadline isUppercase={titleUppercase}>{title}</SectionHeadline>
         {children}
       </div>
@@ -28,11 +28,11 @@ const MediaContent = ({
   }
 
   return (
-    <div className='' style={{ backgroundColor }}>
+    <section className='section' style={{ backgroundColor }}>
       <div className={`container my-4 py-6 ${styles.container}`}>
         <div className='columns is-vcentered'>{columns}</div>
       </div>
-    </div>
+    </section>
   )
 }
 

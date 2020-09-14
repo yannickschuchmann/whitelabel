@@ -1,17 +1,22 @@
 import React from 'react'
 import SectionHeadline from '../SectionHeadline'
+import styles from './BodySegments.module.scss'
 
 const BodySegments = ({ children, title, titlePosition = 'left' }) => {
   return (
-    <div className='container py-6'>
-      <div className='columns px-6 mb-6'>
-        {titlePosition === 'right' && <div className='column'></div>}
-        <div className='column'>
-          <SectionHeadline>{title}</SectionHeadline>
+    <section className='section'>
+      <div className='container py-6'>
+        <div className={`columns mb-6 ${styles.xSpacing}`}>
+          {titlePosition === 'right' && <div className='column'></div>}
+          <div className='column'>
+            <SectionHeadline>{title}</SectionHeadline>
+          </div>
+        </div>
+        <div className={`columns is-multiline ${styles.xSpacing}`}>
+          {children}
         </div>
       </div>
-      <div className='columns is-multiline px-6'>{children}</div>
-    </div>
+    </section>
   )
 }
 

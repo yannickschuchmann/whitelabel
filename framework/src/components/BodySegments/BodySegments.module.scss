@@ -1,0 +1,10 @@
+@import 'node_modules/bulma/sass/utilities/initial-variables.sass';
+
+.xSpacing {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  @media (min-width: $tablet) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}

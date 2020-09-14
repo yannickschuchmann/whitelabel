@@ -61,21 +61,23 @@ const Footer = ({
   }
 
   return (
-    <div className='container has-text-centered mt-6 py-6'>
-      <div className={`level pt-6 px-6 mx-6 ${styles.navLinks}`}>
-        {navigationEls}
-      </div>
-      <hr />
-      <div className='pt-5'>{socialButtons}</div>
-      {secondaryNavLinks.length > 0 && (
-        <div className={`columns is-centered pt-3 ${styles.navLinks}`}>
-          {secondaryNavigationEls}
+    <section className='section'>
+      <div className='container has-text-centered mt-6 py-6'>
+        <div className={`level pt-6 px-6 mx-6 ${styles.navLinks}`}>
+          {navigationEls}
         </div>
-      )}
-      <p className='is-size-7 has-text-dark'>
-        © {years} {company}
-      </p>
-    </div>
+        <hr />
+        <div className='pt-5'>{socialButtons}</div>
+        {secondaryNavLinks.length > 0 && (
+          <div className={`columns is-centered pt-3 ${styles.navLinks}`}>
+            {secondaryNavigationEls}
+          </div>
+        )}
+        <p className='is-size-7 has-text-dark'>
+          © {years} {company}
+        </p>
+      </div>
+    </section>
   )
 }
 
