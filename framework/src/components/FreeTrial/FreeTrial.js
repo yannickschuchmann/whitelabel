@@ -132,11 +132,10 @@ const FreeTrial = ({ endpoint }) => {
   return (
     <div className='container has-text-centered py-6 my-6'>
       <h3 className='title is-2 has-text-weight-light'>
-        Ready to take a free trial?
+        Want to take a free trial?
       </h3>
       <p className='px-6 mx-6 mb-6 is-size-3 has-text-weight-light'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore
+      Beta access is available upon request. The release of new features is done in regular cycles.
       </p>
       <div className='columns is-mobile is-centered'>
         <div className='column is-three-quarters-mobile is-half-tablet is-one-third-fullhd'>
