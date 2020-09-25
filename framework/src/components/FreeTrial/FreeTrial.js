@@ -135,7 +135,7 @@ const FreeTrial = ({ endpoint }) => {
         Want to take a free trial?
       </h3>
       <p className='px-6 mx-6 mb-6 is-size-3 has-text-weight-light'>
-      Beta access is available upon request. The release of new features is done in regular cycles.
+        Beta access is available upon request. The release of new features is done in regular cycles.
       </p>
       <div className='columns is-mobile is-centered'>
         <div className='column is-three-quarters-mobile is-half-tablet is-one-third-fullhd'>

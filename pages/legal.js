@@ -33,7 +33,7 @@ const Legal = ({ t }) => {
               t={t}
               i18nKey="contact.text"
               components={{
-                mailto: <a href="mailto:info@amiinporn.org"></a>,
+                mailto: <a href="mailto:we@deepchange.io"></a>,
               }}
             />
           </BodySegment>
@@ -47,7 +47,7 @@ const Legal = ({ t }) => {
               i18nKey="odr.text"
               components={{
                 a: <a href="https://webgate.ec.europa.eu/odr/"></a>,
-                mailto: <a href="mailto:info@amiinporn.org"></a>,
+                mailto: <a href="mailto:we@deepchange.io"></a>,
               }}
             />
           </BodySegment>
