@@ -41,5 +41,6 @@ Deploy by pushing to master branch.
 
 We use Google spreadsheets to store forms data. See https://github.com/jamiewilson/form-to-google-sheets
 Copy code from `vendor/googleSpreadsheetsTrigger.js`.
+Note: Rename spreadsheet sheet to "sheet1".
 Use `deepwebsite Form Notification` Slack App to create an incoming webhook for your channel.
 Add a channel here to get a webhook url: https://api.slack.com/apps/A019M7Z1S75/incoming-webhooks?
