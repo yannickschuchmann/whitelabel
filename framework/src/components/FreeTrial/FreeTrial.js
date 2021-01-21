@@ -114,8 +114,8 @@ const Form = ({ endpoint }) => {
                 Register now
               </button>
             ) : (
-              <button class='button is-static'>
-                <span class='icon is-small'>
+              <button className='button is-static'>
+                <span className='icon is-small'>
                   <FontAwesomeIcon icon={['fas', 'check']} />
                 </span>
                 <span>Success</span>

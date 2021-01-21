@@ -10,6 +10,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - `git push -u origin master`
 - Import project in vercel, choose repository & grant permissions
 - Configure Domain in Vercel + add A or CNAME Record to Domain Nameserver (namecheap or aws)
+- Add google analytics tracking id
 
 ## Getting Started
 
@@ -41,3 +42,4 @@ Deploy by pushing to master branch.
 We use Google spreadsheets to store forms data. See https://github.com/jamiewilson/form-to-google-sheets
 Copy code from `vendor/googleSpreadsheetsTrigger.js`.
 Use `deepwebsite Form Notification` Slack App to create an incoming webhook for your channel.
+Add a channel here to get a webhook url: https://api.slack.com/apps/A019M7Z1S75/incoming-webhooks?
