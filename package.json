@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@deepchange/building-blocks": "^1.5.0",
+    "@deepchange/building-blocks": "^1.13.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",

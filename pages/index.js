@@ -168,6 +168,10 @@ const Start = ({ t }) => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore
       </Quote>
+      <Quote author="Mark Twain">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore
+      </Quote>
       <div id="contact">
         <Contact />
       </div>
