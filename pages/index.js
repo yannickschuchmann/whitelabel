@@ -127,9 +127,9 @@ const Start = ({ t }) => {
       </div>
       <PitchDeck />
       <Contact />
-      <div id="free-trial">
+      <section id="free-trial" className="section">
         <FreeTrial endpoint={FREE_TRIAL_ENDPOINT} />
-      </div>
+      </section>
       <div id="about-us">
         <MediaContent
           imageSrc="/team.jpg"

@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from './SocialProof.module.css'
 
-const Column = ({ src, alt, url }) => {
-  const image = <img className={styles.image} src={src} alt={alt} />
+const Column = ({ src, alt, url, imgStyle, ...props }) => {
+  const image = (
+    <img className={styles.image} style={imgStyle} src={src} alt={alt} />
+  )
   return (
-    <div className='column has-text-centered is-half-mobile'>
+    <div className='column has-text-centered is-half-mobile' {...props}>
       {url ? <a href={url}>{image}</a> : image}
     </div>
   )

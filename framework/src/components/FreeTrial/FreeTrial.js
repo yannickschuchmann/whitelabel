@@ -131,20 +131,22 @@ const Form = ({ endpoint, afterSubmit }) => {
 
 const FreeTrial = ({ endpoint }) => {
   return (
-    <div className='container has-text-centered py-6 my-6'>
-      <h3 className='title is-2 has-text-weight-light'>
-        Want to take a free trial?
-      </h3>
-      <p className='px-6 mx-6 mb-6 is-size-3 has-text-weight-light'>
-        Beta access is available upon request. The release of new features is
-        done in regular cycles.
-      </p>
-      <div className='columns is-mobile is-centered'>
-        <div className='column is-three-quarters-mobile is-half-tablet is-one-third-fullhd'>
-          <Form endpoint={endpoint} />
+    <section className='section'>
+      <div className='container has-text-centered py-6 my-6'>
+        <h3 className='title is-2 has-text-weight-light'>
+          Want to take a free trial?
+        </h3>
+        <p className='px-6 mx-6 mb-6 is-size-3 has-text-weight-light'>
+          Beta access is available upon request. The release of new features is
+          done in regular cycles.
+        </p>
+        <div className='columns is-mobile is-centered'>
+          <div className='column is-three-quarters-mobile is-half-tablet is-one-third-fullhd'>
+            <Form endpoint={endpoint} />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
