@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { postFormToSheet } from '../../helpers/googleSheets'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Form = ({ endpoint, afterSubmit }) => {
+const Form = ({ title, endpoint, afterSubmit }) => {
   const { register, handleSubmit, errors } = useForm()
   const [isLoading, setLoading] = useState(false)
   const [isSuccess, setSuccess] = useState(false)
@@ -24,7 +24,7 @@ const Form = ({ endpoint, afterSubmit }) => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className='box has-text-left'>
         <div className='my-5'>
-          <strong className='is-size-5'>Sign up for a free trial</strong>
+          <strong className='is-size-5'>{title}</strong>
         </div>
         <div className='columns'>
           <div className='column'>
@@ -129,20 +129,17 @@ const Form = ({ endpoint, afterSubmit }) => {
   )
 }
 
-const FreeTrial = ({ endpoint }) => {
+const FreeTrial = ({ headline, subline, formTitle, endpoint }) => {
   return (
     <section className='section'>
       <div className='container has-text-centered py-6 my-6'>
-        <h3 className='title is-2 has-text-weight-light'>
-          Want to take a free trial?
-        </h3>
+        <h3 className='title is-2 has-text-weight-light'>{headline}</h3>
         <p className='px-md-6 mx-6 mb-6 is-size-3 has-text-weight-light'>
-          Beta access is available upon request. The release of new features is
-          done in regular cycles.
+          {subline}
         </p>
         <div className='columns is-mobile is-centered'>
           <div className='column is-three-quarters-mobile is-half-tablet is-one-third-fullhd'>
-            <Form endpoint={endpoint} />
+            <Form title={formTitle} endpoint={endpoint} />
           </div>
         </div>
       </div>

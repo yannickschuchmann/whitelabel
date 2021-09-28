@@ -128,7 +128,13 @@ const Start = ({ t }) => {
       <PitchDeck />
       <Contact />
       <section id="free-trial" className="section">
-        <FreeTrial endpoint={FREE_TRIAL_ENDPOINT} />
+        <FreeTrial
+          headline="Want to take a free trial?"
+          subline="Beta access is available upon request. The release of new features is
+          done in regular cycles."
+          formTitle="Sign up for a free trial"
+          endpoint={FREE_TRIAL_ENDPOINT}
+        />
       </section>
       <div id="about-us">
         <MediaContent
