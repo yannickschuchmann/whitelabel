@@ -8,7 +8,7 @@ const Column = ({ src, alt, url, imgStyle, centered, ...props }) => {
   return (
     <div
       className={`${
-        centered ? 'px-3' : 'column'
+        centered ? 'px-5' : 'column'
       } has-text-centered is-half-mobile`}
       {...props}
     >
