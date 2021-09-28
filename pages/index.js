@@ -37,6 +37,9 @@ const Start = ({ t }) => {
       <Header />
       <Hero headline="headline" subline="subline" />
       <SocialProof images={socialProofImages}>{t("socialProof")}</SocialProof>
+      <SocialProof centered images={socialProofImages.splice(0, 2)}>
+        {t("socialProof-centered")}
+      </SocialProof>
       <Contact />
       <div id="vision">
         <MediaContent
