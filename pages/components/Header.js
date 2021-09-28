@@ -40,7 +40,7 @@ const Header = ({ t }) => {
       url: "/#contact",
     },
   ];
-  return <Navigation logoSrc="/logo.png" links={navLinks} />;
+  return <Navigation logoSrc="/logo.svg" links={navLinks} />;
 };
 
 export default withTranslation("common")(Header);
