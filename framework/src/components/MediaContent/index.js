@@ -1,2 +1,1 @@
-import Component from "./MediaContent";
-export default Component;
+export * from './MediaContent'

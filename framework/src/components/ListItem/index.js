@@ -1,2 +1,1 @@
-import Component from "./ListItem";
-export default Component;
+export * from './ListItem'

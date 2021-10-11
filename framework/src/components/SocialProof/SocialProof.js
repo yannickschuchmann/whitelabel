@@ -17,7 +17,7 @@ const Column = ({ src, alt, url, imgStyle, centered, ...props }) => {
   )
 }
 
-const SocialProof = ({ children, images = [], centered = false }) => {
+export const SocialProof = ({ children, images = [], centered = false }) => {
   return (
     <div className={`container my-5 ${styles.container}`}>
       <p className='py-5 is-size-6 has-text-centered'>{children}</p>
@@ -29,5 +29,3 @@ const SocialProof = ({ children, images = [], centered = false }) => {
     </div>
   )
 }
-
-export default SocialProof

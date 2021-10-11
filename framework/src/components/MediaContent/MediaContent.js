@@ -1,8 +1,8 @@
 import React from 'react'
-import SectionHeadline from '../SectionHeadline'
+import { SectionHeadline } from '../SectionHeadline'
 import styles from './MediaContent.module.scss'
 
-const MediaContent = ({
+export const MediaContent = ({
   children,
   imageSrc,
   imageAlt,
@@ -35,5 +35,3 @@ const MediaContent = ({
     </section>
   )
 }
-
-export default MediaContent

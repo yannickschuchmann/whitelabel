@@ -1,5 +1,5 @@
 import React from 'react'
-import SectionHeadline from '../SectionHeadline'
+import { SectionHeadline } from '../SectionHeadline'
 import styles from './BodySegments.module.scss'
 
 const BodySegments = ({ children, title, titlePosition = 'left' }) => {

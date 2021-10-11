@@ -9,5 +9,14 @@
     "contact": "Contact",
     "legal": "Legal",
     "privacy": "Privacy"
+  },
+  "cookies": {
+    "title": "Our website uses cookies",
+    "why": "We would like to use our own and third party cookies and similar technologies for analytical purposes. You can set your preferences by selecting the options below.",
+    "more": "Learn more about how we use cookies and who sets cookies on our website.",
+    "necessary": "<strong>Necessary cookies</strong> help with the basic functionality of our website, e.g. remember if you gave consent to cookies.",
+    "analytical": "<strong>Analytical cookies</strong> make it possible to gather statistics about the use and traffic on our website, so we can make it better.",
+    "buttonSelected": "Allow selected",
+    "buttonAll": "Allow all"
   }
 }

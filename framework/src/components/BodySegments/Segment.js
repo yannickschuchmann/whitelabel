@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Segment.module.css'
 
-const SegmentsItem = ({ children, title }) => {
+const BodySegment = ({ children, title }) => {
   return (
     <div className='column is-half'>
       <div className='mt-6 mb-5'>
@@ -16,4 +16,4 @@ const SegmentsItem = ({ children, title }) => {
   )
 }
 
-export default SegmentsItem
+export default BodySegment

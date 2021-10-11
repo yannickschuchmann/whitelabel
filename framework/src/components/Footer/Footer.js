@@ -8,7 +8,7 @@ const Logo = ({ src }) => (
   </div>
 )
 
-const Footer = ({
+export const Footer = ({
   company = 'Company name',
   years = '2020',
   navLinks = [],
@@ -80,5 +80,3 @@ const Footer = ({
     </section>
   )
 }
-
-export default Footer

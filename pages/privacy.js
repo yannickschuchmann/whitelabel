@@ -1,11 +1,9 @@
 import Head from "next/head";
-import { Trans } from "../i18n";
 import styles from "../styles/Start.module.css";
 import Contact from "./components/Contact";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { BodySegment, BodySegments } from "@deepchange/building-blocks";
-import { useTranslation, withTranslation } from "../i18n";
+import { BodySegment, BodySegments, Footer } from "@deepchange/building-blocks";
+import { withTranslation } from "../i18n";
 
 const Privacy = ({ t }) => {
   return (

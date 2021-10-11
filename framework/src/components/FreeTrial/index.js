@@ -1,2 +1,1 @@
-import Component from "./FreeTrial";
-export default Component;
+export * from './FreeTrial'

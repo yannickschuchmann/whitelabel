@@ -1,15 +1,13 @@
-import React from "react";
+import React from 'react'
 
-const SectionHeadline = ({ children, isUppercase = true }) => {
+export const SectionHeadline = ({ children, isUppercase = true }) => {
   return (
     <h3
       className={`title is-2 has-text-weight-light is-family-secondary ${
-        isUppercase ? "is-uppercase" : ""
+        isUppercase ? 'is-uppercase' : ''
       }`}
     >
       {children}
     </h3>
-  );
-};
-
-export default SectionHeadline;
+  )
+}

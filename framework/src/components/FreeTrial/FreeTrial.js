@@ -129,7 +129,7 @@ const Form = ({ title, endpoint, afterSubmit }) => {
   )
 }
 
-const FreeTrial = ({ headline, subline, formTitle, endpoint }) => {
+export const FreeTrial = ({ headline, subline, formTitle, endpoint }) => {
   return (
     <section className='section'>
       <div className='container has-text-centered py-6 my-6'>
@@ -146,5 +146,3 @@ const FreeTrial = ({ headline, subline, formTitle, endpoint }) => {
     </section>
   )
 }
-
-export default FreeTrial

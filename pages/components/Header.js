@@ -1,6 +1,6 @@
 import React from "react";
-import { withTranslation } from "../../i18n";
-import { Navigation } from "@deepchange/building-blocks";
+import { Link, Trans, withTranslation } from "../../i18n";
+import { CookiePolicy, Navigation } from "@deepchange/building-blocks";
 
 const Header = ({ t }) => {
   const navLinks = [
@@ -40,7 +40,23 @@ const Header = ({ t }) => {
       url: "/#contact",
     },
   ];
-  return <Navigation logoSrc="/logo.svg" links={navLinks} />;
+  return (
+    <React.Fragment>
+      <CookiePolicy
+        title={t("cookies.title")}
+        necessaryText={<Trans t={t} i18nKey="cookies.necessary" />}
+        analyticalText={<Trans t={t} i18nKey="cookies.analytical" />}
+        buttonSelectedText={t("cookies.buttonSelected")}
+        buttonAllText={t("cookies.buttonAll")}
+      >
+        <p className="mb-3">{t("cookies.why")}</p>
+        <Link href="/privacy">
+          <a className="has-text-black is-underlined">{t("cookies.more")}</a>
+        </Link>
+      </CookiePolicy>
+      <Navigation logoSrc="/logo.svg" links={navLinks} />
+    </React.Fragment>
+  );
 };
 
 export default withTranslation("common")(Header);

@@ -1,2 +1,1 @@
-import Component from "./SectionHeadline";
-export default Component;
+export * from './SectionHeadline'

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import styles from './Navigation.module.scss'
 
-const Navigation = ({ links, logoSrc }) => {
+export const Navigation = ({ links, logoSrc }) => {
   const [open, setOpen] = useState(false)
 
   const onOpen = () => {
@@ -51,5 +51,3 @@ const Navigation = ({ links, logoSrc }) => {
     </div>
   )
 }
-
-export default Navigation

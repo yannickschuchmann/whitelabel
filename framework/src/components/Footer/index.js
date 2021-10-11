@@ -1,2 +1,1 @@
-import Component from "./Footer";
-export default Component;
+export * from './Footer'

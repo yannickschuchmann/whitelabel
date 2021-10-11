@@ -1,2 +1,1 @@
-import Component from "./Navigation";
-export default Component;
+export * from './Navigation'

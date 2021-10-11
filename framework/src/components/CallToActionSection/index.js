@@ -1,2 +1,1 @@
-import Component from "./CallToActionSection";
-export default Component;
+export * from './CallToActionSection'

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './ListItem.module.scss'
 
-const ListItem = ({ children, imageSrc, imageAlt = '' }) => {
+export const ListItem = ({ children, imageSrc, imageAlt = '' }) => {
   return (
     <div className='my-5'>
       <div className='columns is-mobile is-vcentered'>
@@ -15,5 +15,3 @@ const ListItem = ({ children, imageSrc, imageAlt = '' }) => {
     </div>
   )
 }
-
-export default ListItem

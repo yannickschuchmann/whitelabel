@@ -1,2 +1,1 @@
-import Component from "./Hero";
-export default Component;
+export * from './Hero'

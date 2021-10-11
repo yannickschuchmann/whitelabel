@@ -7,7 +7,9 @@ import {
   BodySegment,
   BodySegments,
   Footer,
-  FreeTrial,
+  Form,
+  FormEmailField,
+  FormInputField,
   Hero,
   ListItem,
   MediaContent,
@@ -131,13 +133,52 @@ const Start = ({ t }) => {
       <PitchDeck />
       <Contact />
       <section id="free-trial" className="section">
-        <FreeTrial
+        <Form
           headline="Want to take a free trial?"
           subline="Beta access is available upon request. The release of new features is
           done in regular cycles."
           formTitle="Sign up for a free trial"
+          buttonText="Send"
+          requiredText="This field is required"
           endpoint={FREE_TRIAL_ENDPOINT}
-        />
+        >
+          <div className="columns">
+            <div className="column">
+              <FormInputField
+                name="first_name"
+                placeholder="First Name*"
+                required
+              />
+            </div>
+            <div className="column">
+              <FormInputField
+                name="last_name"
+                placeholder="Last Name*"
+                required
+              />
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column">
+              <FormEmailField
+                name="email"
+                placeholder="Email address*"
+                patternText="This is not a valid email"
+                required
+              />
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column">
+              <FormInputField name="phone" placeholder="Phone" />
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column">
+              <FormInputField name="company" placeholder="Company" />
+            </div>
+          </div>
+        </Form>
       </section>
       <div id="about-us">
         <MediaContent

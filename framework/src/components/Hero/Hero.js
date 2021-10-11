@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Hero.module.css'
 
-const Hero = ({ headline, subline, textStyle = 'light' }) => {
+export const Hero = ({ headline, subline, textStyle = 'light' }) => {
   return (
     <section className={`${styles.hero} hero is-fullheight-with-navbar`}>
       <div className='hero-body'>
@@ -13,5 +13,3 @@ const Hero = ({ headline, subline, textStyle = 'light' }) => {
     </section>
   )
 }
-
-export default Hero
