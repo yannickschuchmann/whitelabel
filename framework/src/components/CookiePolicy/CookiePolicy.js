@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'
 
 const setCookies = (checked) => {
   Object.keys(checked).forEach((key) => {
-    Cookies.set(`cookie-consent-${key}`, checked[key])
+    Cookies.set(`cookie-consent-${key}`, checked[key], { expires: 365 })
   })
 }
 
@@ -25,10 +25,18 @@ export const CookiePolicy = ({
     analytical: null
   })
   useEffect(() => {
-    setConsents({
+    const nextConsents = {
       necessary: JSON.parse(Cookies.get('cookie-consent-necessary') || false),
       analytical: JSON.parse(Cookies.get('cookie-consent-analytical') || false)
-    })
+    }
+    setConsents(nextConsents)
+
+    if (nextConsents.analytical) {
+      window.gtag &&
+        window.gtag('consent', 'update', {
+          analytics_storage: 'granted'
+        })
+    }
   }, [confirmed])
 
   const handleChange = (e) => {
@@ -46,63 +54,61 @@ export const CookiePolicy = ({
     setConfirmed(true)
   }
 
-  return !process.browser
-    ? null
-    : !consents.necessary && (
-        <div>
-          <div className='modal is-active'>
-            <div className='modal-background'></div>
-            <div class='modal-card'>
-              <header class='modal-card-head'>
-                <p class='modal-card-title'>{title}</p>
-              </header>
-              <section class='modal-card-body'>
-                {children}
-                <hr />
-                <form>
-                  <div className='field'>
-                    <div className='control'>
-                      <label class='checkbox' disabled>
-                        <input
-                          type='checkbox'
-                          className='mr-2'
-                          name='necessary'
-                          checked={checked.necessary}
-                          disabled
-                        />
-                        {necessaryText}
-                      </label>
-                    </div>
-                  </div>
-                  <div className='field'>
-                    <div className='control'>
-                      <label class='checkbox'>
-                        <input
-                          type='checkbox'
-                          name='analytical'
-                          onChange={handleChange}
-                          checked={checked.analytical}
-                          className='mr-2'
-                        />
-                        {analyticalText}
-                      </label>
-                    </div>
-                  </div>
-                </form>
-              </section>
-              <footer class='modal-card-foot'>
-                <button class='button is-fullwidth' onClick={handleSelected}>
-                  {buttonSelectedText}
-                </button>
-                <button
-                  class='button is-black is-fullwidth'
-                  onClick={handleAll}
-                >
-                  {buttonAllText}
-                </button>
-              </footer>
-            </div>
-          </div>
+  return (
+    <div>
+      <div className={`modal ${!consents.necessary ? 'is-active' : ''}`}>
+        <div className='modal-background'></div>
+        <div className='modal-card'>
+          <header className='modal-card-head'>
+            <p className='modal-card-title'>{title}</p>
+          </header>
+          <section className='modal-card-body'>
+            {children}
+            <hr />
+            <form>
+              <div className='field'>
+                <div className='control'>
+                  <label className='checkbox' disabled>
+                    <input
+                      type='checkbox'
+                      className='mr-2'
+                      name='necessary'
+                      checked={checked.necessary}
+                      disabled
+                    />
+                    {necessaryText}
+                  </label>
+                </div>
+              </div>
+              <div className='field'>
+                <div className='control'>
+                  <label className='checkbox'>
+                    <input
+                      type='checkbox'
+                      name='analytical'
+                      onChange={handleChange}
+                      checked={checked.analytical}
+                      className='mr-2'
+                    />
+                    {analyticalText}
+                  </label>
+                </div>
+              </div>
+            </form>
+          </section>
+          <footer className='modal-card-foot'>
+            <button className='button is-fullwidth' onClick={handleSelected}>
+              {buttonSelectedText}
+            </button>
+            <button
+              className='button is-black is-fullwidth'
+              onClick={handleAll}
+            >
+              {buttonAllText}
+            </button>
+          </footer>
         </div>
-      )
+      </div>
+    </div>
+  )
 }
