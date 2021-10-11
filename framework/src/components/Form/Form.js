@@ -115,25 +115,23 @@ export const Form = ({
   children
 }) => {
   return (
-    <section className='section'>
-      <div className='container has-text-centered py-6 my-6'>
-        <h3 className='title is-2 has-text-weight-light'>{headline}</h3>
-        <p className='px-md-6 mx-6 mb-6 is-size-3 has-text-weight-light'>
-          {subline}
-        </p>
-        <div className='columns is-mobile is-centered'>
-          <div className='column is-three-quarters-mobile is-half-tablet is-one-third-fullhd'>
-            <FormBody
-              title={formTitle}
-              endpoint={endpoint}
-              buttonText={buttonText}
-            >
-              {children}
-            </FormBody>
-          </div>
+    <div className='container has-text-centered'>
+      <h3 className='title is-2 has-text-weight-light'>{headline}</h3>
+      <p className='px-md-6 mx-6 mb-6 is-size-3 has-text-weight-light'>
+        {subline}
+      </p>
+      <div className='columns is-mobile is-centered'>
+        <div className='column is-three-quarters-mobile is-half-tablet is-one-third-fullhd'>
+          <FormBody
+            title={formTitle}
+            endpoint={endpoint}
+            buttonText={buttonText}
+          >
+            {children}
+          </FormBody>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
