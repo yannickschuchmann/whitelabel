@@ -21,7 +21,7 @@ export const CookiePolicy = ({
     analytical: false
   })
   const [consents, setConsents] = useState({
-    necessary: null,
+    necessary: true, // avoid flickering of modal
     analytical: null
   })
   useEffect(() => {
