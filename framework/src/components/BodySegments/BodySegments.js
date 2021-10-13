@@ -2,7 +2,12 @@ import React from 'react'
 import { SectionHeadline } from '../SectionHeadline'
 import styles from './BodySegments.module.scss'
 
-const BodySegments = ({ children, title, titlePosition = 'left' }) => {
+const BodySegments = ({
+  children,
+  title,
+  contentClassName = 'columns is-multiline',
+  titlePosition = 'left'
+}) => {
   return (
     <section className='section'>
       <div className='container py-6'>
@@ -12,7 +17,7 @@ const BodySegments = ({ children, title, titlePosition = 'left' }) => {
             <SectionHeadline>{title}</SectionHeadline>
           </div>
         </div>
-        <div className={`columns is-multiline ${styles.xSpacing}`}>
+        <div className={`${contentClassName} ${styles.xSpacing}`}>
           {children}
         </div>
       </div>
