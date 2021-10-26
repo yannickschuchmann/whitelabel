@@ -91,43 +91,63 @@ const Start = ({ t }) => {
         </MediaContent>
       </div>
       <div id="value-props">
-        <BodySegments title="Value Propositions" titlePosition="right">
-          <BodySegment title="Value prop A">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
-            quasi nihil aspernatur, veritatis eos facilis iure libero, at
-            aliquid minus quis dolor beatae in!
-          </BodySegment>
-          <BodySegment title="Value prop B">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
-            quasi nihil aspernatur, veritatis eos facilis iure libero, at
-            aliquid minus quis dolor beatae in!
-          </BodySegment>
-          <BodySegment title="Value prop C">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
-            quasi nihil aspernatur, veritatis eos facilis iure libero, at
-            aliquid minus quis dolor beatae in!
-          </BodySegment>
-          <BodySegment title="Value prop D">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
-            quasi nihil aspernatur, veritatis eos facilis iure libero, at
-            aliquid minus quis dolor beatae in!
-          </BodySegment>
-          <BodySegment title="Value prop E">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
-            quasi nihil aspernatur, veritatis eos facilis iure libero, at
-            aliquid minus quis dolor beatae in!
-          </BodySegment>
-          <BodySegment title="Value prop F">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
-            quasi nihil aspernatur, veritatis eos facilis iure libero, at
-            aliquid minus quis dolor beatae in!
-          </BodySegment>
+        <BodySegments
+          title="Value Propositions"
+          // titlePosition="left"
+          contentClassName=""
+        >
+          <div className="columns is-multiline">
+            <BodySegment
+              iconSrc="/icons/affected.png"
+              className=""
+              title="Value prop A"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
+              quasi nihil aspernatur, veritatis eos facilis iure libero, at
+              aliquid minus quis dolor beatae in!
+            </BodySegment>
+            <BodySegment
+              iconSrc="/icons/affected.png"
+              className=""
+              title="Value prop B"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
+              quasi nihil aspernatur, veritatis eos facilis iure libero, at
+              aliquid minus quis dolor beatae in!
+            </BodySegment>
+            <BodySegment
+              iconSrc="/icons/affected.png"
+              className=""
+              title="Value prop C"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
+              quasi nihil aspernatur, veritatis eos facilis iure libero, at
+              aliquid minus quis dolor beatae in!
+            </BodySegment>
+          </div>
+          <div className="columns is-multiline">
+            <BodySegment title="Value prop D">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
+              quasi nihil aspernatur, veritatis eos facilis iure libero, at
+              aliquid minus quis dolor beatae in!
+            </BodySegment>
+            <BodySegment title="Value prop E">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
+              quasi nihil aspernatur, veritatis eos facilis iure libero, at
+              aliquid minus quis dolor beatae in!
+            </BodySegment>
+            <BodySegment title="Value prop F">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Repellendus quaerat animi dolorem voluptatem dolore perspiciatis
+              quasi nihil aspernatur, veritatis eos facilis iure libero, at
+              aliquid minus quis dolor beatae in!
+            </BodySegment>
+          </div>
         </BodySegments>
       </div>
       <PitchDeck />
@@ -214,7 +234,7 @@ const Start = ({ t }) => {
       </div>
       <br />
       <br />
-      <Quote>
+      <Quote showQuotes={false}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore
       </Quote>

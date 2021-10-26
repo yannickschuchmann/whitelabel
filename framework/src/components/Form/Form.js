@@ -117,11 +117,11 @@ export const Form = ({
   return (
     <div className='container has-text-centered'>
       <h3 className='title is-2 has-text-weight-light'>{headline}</h3>
-      <p className='px-md-6 mx-6 mb-6 is-size-3 has-text-weight-light'>
+      <div className='px-md-6 mx-6 mb-6 is-size-3 has-text-weight-light'>
         {subline}
-      </p>
-      <div className='columns is-mobile is-centered'>
-        <div className='column is-three-quarters-mobile is-half-tablet is-one-third-fullhd'>
+      </div>
+      <div className='columns is-centered'>
+        <div className='column is-half-tablet is-one-third-fullhd'>
           <FormBody
             title={formTitle}
             endpoint={endpoint}

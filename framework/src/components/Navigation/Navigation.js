@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import styles from './Navigation.module.scss'
 
-export const Navigation = ({ links, logoSrc }) => {
+export const Navigation = ({ links, logoStyle, logoSrc }) => {
   const [open, setOpen] = useState(false)
 
   const onOpen = () => {
@@ -30,7 +30,13 @@ export const Navigation = ({ links, logoSrc }) => {
       <nav className='navbar' role='navigation' aria-label='main navigation'>
         <div className='navbar-brand'>
           <a className='navbar-item' href='/'>
-            <img className={styles.logo} height='28' src={logoSrc} alt='Logo' />
+            <img
+              className={styles.logo}
+              style={logoStyle}
+              height='28'
+              src={logoSrc}
+              alt='Logo'
+            />
           </a>
           <a
             role='button'
