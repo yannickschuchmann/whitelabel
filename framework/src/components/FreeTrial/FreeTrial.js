@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { postFormToSheet } from '../../helpers/googleSheets'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Form = ({ title, endpoint, afterSubmit }) => {
+const Form = ({ title, endpoint, afterSubmit, buttonColor = 'is-black' }) => {
   const { register, handleSubmit, errors } = useForm()
   const [isLoading, setLoading] = useState(false)
   const [isSuccess, setSuccess] = useState(false)
@@ -110,7 +110,9 @@ const Form = ({ title, endpoint, afterSubmit }) => {
             {!isSuccess ? (
               <button
                 type='submit'
-                className={`button is-black ${isLoading ? 'is-loading' : ''}`}
+                className={`button ${buttonColor} ${
+                  isLoading ? 'is-loading' : ''
+                }`}
               >
                 Register now
               </button>
@@ -129,7 +131,13 @@ const Form = ({ title, endpoint, afterSubmit }) => {
   )
 }
 
-export const FreeTrial = ({ headline, subline, formTitle, endpoint }) => {
+export const FreeTrial = ({
+  headline,
+  subline,
+  formTitle,
+  endpoint,
+  buttonColor
+}) => {
   return (
     <section className='section'>
       <div className='container has-text-centered py-6 my-6'>
@@ -139,7 +147,11 @@ export const FreeTrial = ({ headline, subline, formTitle, endpoint }) => {
         </p>
         <div className='columns is-mobile is-centered'>
           <div className='column is-three-quarters-mobile is-half-tablet is-one-third-fullhd'>
-            <Form title={formTitle} endpoint={endpoint} />
+            <Form
+              title={formTitle}
+              endpoint={endpoint}
+              buttonColor={buttonColor}
+            />
           </div>
         </div>
       </div>

@@ -2,7 +2,13 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import styles from './Navigation.module.scss'
 
-export const Navigation = ({ links, logoStyle, logoSrc }) => {
+export const Navigation = ({
+  links,
+  className = '',
+  logoStyle,
+  logoSrc,
+  itemsRight = null
+}) => {
   const [open, setOpen] = useState(false)
 
   const onOpen = () => {
@@ -26,8 +32,12 @@ export const Navigation = ({ links, logoStyle, logoSrc }) => {
   ))
 
   return (
-    <div className='container'>
-      <nav className='navbar' role='navigation' aria-label='main navigation'>
+    <nav
+      className={`navbar ${className}`}
+      role='navigation'
+      aria-label='main navigation'
+    >
+      <div className='container'>
         <div className='navbar-brand'>
           <a className='navbar-item' href='/'>
             <img
@@ -51,9 +61,12 @@ export const Navigation = ({ links, logoStyle, logoSrc }) => {
           </a>
         </div>
         <div className={`${open && 'is-active'} navbar-menu`}>
-          <div className='navbar-end'>{navItems}</div>
+          <div className='navbar-end'>
+            {navItems}
+            {itemsRight}
+          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   )
 }

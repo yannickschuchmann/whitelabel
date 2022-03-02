@@ -14,7 +14,8 @@ export const Footer = ({
   navLinks = [],
   secondaryNavLinks = [],
   logoSrc,
-  socialButtons
+  socialButtons,
+  linkColor = 'has-text-black'
 }) => {
   const onJump = (target) => (e) => {
     const targetEl = document.querySelector(target)
@@ -29,7 +30,7 @@ export const Footer = ({
       <Link href={url}>
         <a
           onClick={target && onJump(target)}
-          className='is-size-7 has-text-black'
+          className={`is-size-7 ${linkColor}`}
         >
           <strong>{text}</strong>
         </a>
@@ -43,7 +44,7 @@ export const Footer = ({
         <Link href={url}>
           <a
             onClick={target && onJump(target)}
-            className='is-size-7 has-text-black'
+            className={`is-size-7 ${linkColor}`}
           >
             <strong>{text}</strong>
           </a>

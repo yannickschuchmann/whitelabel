@@ -3,6 +3,7 @@ import { SectionHeadline } from '../SectionHeadline'
 import styles from './MediaContent.module.scss'
 
 export const MediaContent = ({
+  boxed = true,
   children,
   imageSrc,
   imageAlt,
@@ -13,7 +14,7 @@ export const MediaContent = ({
 }) => {
   const columns = [
     <div className='column' key='image'>
-      <img src={imageSrc} className='box' alt={imageAlt} />
+      <img src={imageSrc} className={boxed ? 'box' : ''} alt={imageAlt} />
     </div>,
     <div className='column' key='content'>
       <div className={styles.xSpacing}>

@@ -55,7 +55,8 @@ const FormBody = ({
   endpoint,
   afterSubmit,
   children,
-  requiredText = 'This field is required'
+  requiredText = 'This field is required',
+  buttonColor = 'is-black'
 }) => {
   const { register, handleSubmit, errors } = useForm()
   const [isLoading, setLoading] = useState(false)
@@ -86,7 +87,9 @@ const FormBody = ({
               {!isSuccess ? (
                 <button
                   type='submit'
-                  className={`button is-black ${isLoading ? 'is-loading' : ''}`}
+                  className={`button ${buttonColor} ${
+                    isLoading ? 'is-loading' : ''
+                  }`}
                 >
                   {buttonText}
                 </button>
@@ -112,7 +115,8 @@ export const Form = ({
   buttonText,
   formTitle,
   endpoint,
-  children
+  children,
+  buttonColor
 }) => {
   return (
     <div className='container has-text-centered'>
@@ -126,6 +130,7 @@ export const Form = ({
             title={formTitle}
             endpoint={endpoint}
             buttonText={buttonText}
+            buttonColor={buttonColor}
           >
             {children}
           </FormBody>
