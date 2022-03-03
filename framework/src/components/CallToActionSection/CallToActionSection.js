@@ -1,5 +1,7 @@
 import React from 'react'
 
-export const CallToActionSection = ({ children }) => {
-  return <div className='container my-6 has-text-centered'>{children}</div>
+export const CallToActionSection = ({ children, margin = 'my-6' }) => {
+  return (
+    <div className={`container ${margin} has-text-centered`}>{children}</div>
+  )
 }

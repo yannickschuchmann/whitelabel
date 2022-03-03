@@ -1,6 +1,6 @@
 {
   "name": "@deepchange/building-blocks",
-  "version": "1.29.0",
+  "version": "1.30.0",
   "description": "React components for prototyping project pages, mainly used by deepchange community.",
   "author": "yannickschuchmann",
   "license": "ISC",

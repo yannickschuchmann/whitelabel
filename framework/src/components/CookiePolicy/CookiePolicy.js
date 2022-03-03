@@ -97,7 +97,10 @@ export const CookiePolicy = ({
             </form>
           </section>
           <footer className='modal-card-foot'>
-            <button className='button is-fullwidth' onClick={handleSelected}>
+            <button
+              className='button is-white is-fullwidth'
+              onClick={handleSelected}
+            >
               {buttonSelectedText}
             </button>
             <button
