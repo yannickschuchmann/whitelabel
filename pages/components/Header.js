@@ -50,8 +50,8 @@ const Header = ({ t }) => {
         buttonAllText={t("cookies.buttonAll")}
       >
         <p className="mb-3">{t("cookies.why")}</p>
-        <Link href="/privacy">
-          <a className="has-text-black is-underlined">{t("cookies.more")}</a>
+        <Link href="/privacy" className="has-text-black is-underlined">
+          {t("cookies.more")}
         </Link>
       </CookiePolicy>
       <Navigation logoSrc="/logo.svg" links={navLinks} />

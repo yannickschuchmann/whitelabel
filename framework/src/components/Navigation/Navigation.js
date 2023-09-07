@@ -24,10 +24,13 @@ export const Navigation = ({
   }
 
   const navItems = links.map(({ text, url, target }) => (
-    <Link key={text} href={url}>
-      <a className='navbar-item' onClick={target && onJump(target)}>
-        {text}
-      </a>
+    <Link
+      key={text}
+      href={url}
+      className='navbar-item'
+      onClick={target && onJump(target)}
+    >
+      {text}
     </Link>
   ))
 

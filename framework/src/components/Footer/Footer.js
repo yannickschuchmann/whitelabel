@@ -27,13 +27,12 @@ export const Footer = ({
 
   const navigationEls = navLinks.map(({ text, url, target }, idx) => (
     <div className='level-item' key={idx}>
-      <Link href={url}>
-        <a
-          onClick={target && onJump(target)}
-          className={`is-size-7 ${linkColor}`}
-        >
-          <strong>{text}</strong>
-        </a>
+      <Link
+        href={url}
+        onClick={target && onJump(target)}
+        className={`is-size-7 ${linkColor}`}
+      >
+        <strong>{text}</strong>
       </Link>
     </div>
   ))
@@ -41,13 +40,12 @@ export const Footer = ({
   const secondaryNavigationEls = secondaryNavLinks.map(
     ({ text, url, target }, idx) => (
       <div className='column is-narrow' key={idx}>
-        <Link href={url}>
-          <a
-            onClick={target && onJump(target)}
-            className={`is-size-7 ${linkColor}`}
-          >
-            <strong>{text}</strong>
-          </a>
+        <Link
+          href={url}
+          onClick={target && onJump(target)}
+          className={`is-size-7 ${linkColor}`}
+        >
+          <strong>{text}</strong>
         </Link>
       </div>
     )
